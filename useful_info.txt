@@ -1,0 +1,51 @@
+1.Mapping reads to transcripts
+To get assembly statistics for the number of reads that
+could be mapped back to transcripts (RMBT) , we used
+bowtie (version 0.12.7) [17] to map back all input short
+reads to the reconstructed transcripts, with parameters
+“-q –phred33-quals –fr -1 fq1 -2 fq2 -v 3”.[comparision 2011]
+
+2.BLAT[18] with default
+parameters was applied to map the reconstructed transcripts
+from each assembler to non-identical reference
+coding sequences and reference genomes.[comparision 2011]
+
+3.In order to examine how genome with different complexity
+affects assembly outcomes, we selected public
+RNA-Seq data from two model organisms as benchmark:
+fruit fly (D. melanogaster) and fission yeast (S. pombe).[comparision 2011]
+应该说fission yeast简单一些，fruit fly要复杂一些。
+
+4.When measured in the number of assembled transcripts,
+total bases of transcripts, mean length, N50, percentage of
+low quality transcripts, number of long-transcripts (≥1kb),
+and number of reads that could be mapped back to transcripts
+(RMBT), we observed significant improvement on
+the outcomes when MK strategy was applied to each program.
+
+5.测序基础相关
+http://www.bioinfosky.com/forum.php?mod=viewthread&tid=862&reltid=956&pre_pos=1&ext=
+比如，人类基因组包含有30亿个碱基对，其中大约只有5万个基因转录成mRNA分子，而转录后的mRNA仅部分被翻译生成功能性的蛋白质。与基因组不同，转录组更有时间空间性。比如， 我们人体大部分细胞具有一模一样的基因，而即使同一细胞在不同的生长时期及生长环境下，其基因表达情况也是不完全相同的。所以，除了异常的mRNA降解现象（如转录衰减）以外，转录组反映的是特定条件下活跃表达的基因。
+
+6.第三代测序技术非常可怕。1、它实现了DNA聚合酶内在自身的反应速度，一秒可以测10
+个碱基，测序速度是化学法测序的2万倍。2、它实现了DNA聚合酶内在自身的
+processivity（延续性，也就是DNA聚合酶一次可以合成很长的片段），一个反应就可
+以测非常长的序列。 二代测序现在可以测到上百个碱基，但是三代测序现在就可以测
+几千个碱基。这为基因组的重复序列的拼接提供了非常好的条件。3、它的精度非常高
+，达到99.9999%。
+此外，它还有两个应用是二代测序所不具备的。
+第一个是直接测RNA的序列。既然DNA聚合酶能够实时观测，那么以RNA为模板复制DNA的
+逆转录酶也同样可以。RNA的直接测序，将大大降低体外逆转录产生的系统误差。
+第二个是直接测甲基化的DNA序列。实际上DNA聚合酶复制A、T、C、G的速度是不一样的
+。正常的C或者甲基化的C为模板，DNA聚合酶停顿的时间不同。根据这个不同的时间，
+可以判断模板的C是否甲基化。
+
+Pacific Biosciences公司预计2010年或者2011年就会推出商业化的测序仪器。在不远
+的将来，如果他们能和二代测序一样集成100万个纳米微孔，那么一台仪器15分钟就能
+够准确地测出一个人的基因组。以后每个人的基因组测序成本将变成100美元，人人都
+可以消费得起。想想人类基因组计划耗资30亿美元，费时十几年，无数科学家参与其中
+，技术的革新意义是多么重大啊！
+
+7.Despite
+these advantages, sequence reads obtained from the common NGS platforms, including Illumina,
+SOLiD, and 454, are often very short, ranging from 35bp to 500bp

@@ -1,0 +1,44 @@
+1.In order to understand how
+genome complexity influences transcriptome assembly, we
+used two model organisms: D. melanogaster and S. pombe,
+which differed in genomic properties[comparision 2011]
+
+2.map transcript to genome reference, need a translation from genome to transcript?
+
+3.Mapping reads to transcripts
+To get assembly statistics for the number of reads that
+could be mapped back to transcripts (RMBT) , we used
+bowtie (version 0.12.7) [17] to map back all input short
+reads to the reconstructed transcripts, with parameters
+“-q –phred33-quals –fr -1 fq1 -2 fq2 -v 3”.[comparision 2011]
+这一步的目的是什么?
+
+4.如何evaluate拼接rna的结果？
+Expression quintiles
+Short reads used for assembly were aligned to the CDS
+sequences by Tophat (v1.2.0) [19], and then custom PERL
+scripts were applied to computing normalized gene
+expression level by calculating RPKM (Reads Per Kilobase
+of exon model per Million mapped reads) of each transcript.
+Only paired end mapped reads were considered in
+this study. Gene was defined as expressed if it’s RPKM >0,
+and then all expressed genes were divided into expression
+quintiles at 10% intervals for the evaluation.
+
+5.hwo to evaluate gene coverage and integrity of assembled
+transcripts?
+
+6.full-length transcripts? partial-length transcripts?
+
+7.Full-length, partial-length, and fused CDS
+
+8.Expression quintiles
+Short reads used for assembly were aligned to the CDS
+sequences by Tophat (v1.2.0) [19], and then custom PERL
+scripts were applied to computing normalized gene
+expression level by calculating RPKM (Reads Per Kilobase
+of exon model per Million mapped reads) of each transcript.
+Only paired end mapped reads were considered in
+this study. Gene was defined as expressed if it’s RPKM >0,
+and then all expressed genes were divided into expression
+quintiles at 10% intervals for the evaluation.

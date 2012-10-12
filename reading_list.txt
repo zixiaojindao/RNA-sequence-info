@@ -1,0 +1,9 @@
+1.MK method
+Robertson G, Schein J, Chiu R, Corbett R, Field M, Jackman SD, Mungall K,
+Lee S, Okada HM, Qian JQ, et al: De novo assembly and analysis of RNAseq
+data. Nat Methods 2010, 7(11):909-912.
+Surget-Groba Y, Montoya-Burgos JI: Optimization of de novo
+transcriptome assembly from next-generation sequencing data. Genome
+Res 2010, 20(10):1432-1440.
+
+2. Trans-ABySS and ABySS
