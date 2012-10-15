@@ -49,3 +49,47 @@ Pacific Biosciences公司预计2010年或者2011年就会推出商业化的测序仪器。在不远
 7.Despite
 these advantages, sequence reads obtained from the common NGS platforms, including Illumina,
 SOLiD, and 454, are often very short, ranging from 35bp to 500bp
+
+8.rna 测序使用pcr的方法会导致含有GC的序列coverage比较低，这样使得coverage的分布不均匀。
+non-pcr的方法可以解决这个问题，但是错误率增高。
+PCR amplification results
+in a low sequencing coverage for transcripts or regions
+within a transcript that have a high GC content31. This
+can, in turn, cause gaps in the assembled transcripts
+and can cause other transcripts to be missing from the
+assembly altogether. Amplification-free protocols have
+been developed to overcome this problem31,32. The latest
+single-molecule sequencing technologies from Helicos
+and Pacific Biosciences do not require PCR amplification
+before sequencing33. The Helicos system can even
+directly sequence RNAs without cDNA library construction1,34,
+which should greatly reduce biases in sequencing
+coverage. However, these single-molecule technologies
+suffer from high error rates.
+
+9. reference based assembly 优点：
+The reference-based transcriptome
+assembly strategy has several advantages. Because this
+approach transforms a large assembly problem (millions
+of reads) into many smaller assembly problems
+(for example, independent assemblies of each locus
+that contain thousands of reads or less), assembly can
+be solved using parallel computing and can run efficiently
+on machines with only a few gigabytes of RAM.
+Contamination or sequencing artefacts are not a major
+concern for this strategy, because they are not expected
+to align to the reference genome. More importantly, the
+reference-based strategy is very sensitive and can assemble
+transcripts of low abundance. Because the underlying
+genome sequence is already known20, small gaps within
+the transcript that have been caused by a lack of read
+coverage can be filled in using the reference sequence17.
+Similarly, this strategy tends to generate longer UTRs,
+which usually have a lower sequencing coverage16.
+Owing to the high sensitivity of this approach, it allows
+users to discover novel transcripts that are not present
+in the current annotation, as in general such transcripts
+have lower expression levels.
+
+10. combined reference-based and de novo strageties:
+如果reference 质量高，先reference 

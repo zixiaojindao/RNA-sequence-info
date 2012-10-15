@@ -42,3 +42,50 @@ Only paired end mapped reads were considered in
 this study. Gene was defined as expressed if it’s RPKM >0,
 and then all expressed genes were divided into expression
 quintiles at 10% intervals for the evaluation.
+
+9. depth and coverage?
+
+10. pair-end数据如何用？inserts library？
+貌似pairt-end的reads可以合成一个较长的read？
+For transcriptome assembly, longer reads are generally
+preferred, as they greatly reduce the complexity of
+the assembly. It is worth noting, however, that the problem
+posed by short reads can be alleviated by using a
+paired-end protocol, in which 75–150 bp are sequenced
+from both ends of short DNA fragments (100–250 bp),
+and the overlapping reads are computationally joined
+together to form a longer read40. Paired reads from
+long inserts (500–1,000 bp) offer long-range exon connectivity,
+in a similar way to reads obtained using 454
+technology.
+
+11.Data pre-processing. Removing artefacts from RNAseq
+data sets before assembly improves the read quality,
+which, in turn, improves the accuracy and computational
+efficiency of the assembly. This step is straightforward
+and can be executed using several tools41–44. In
+general, three types of artefacts should be removed from
+raw RNA-seq data: sequencing adaptors43,44, which originate
+from failed or short DNA insertions during library
+preparation; low-complexity reads43; and near-identical
+reads that are derived from PCR amplification15. Adaptor
+and low-complexity sequences can lead to misassemblies.
+PCR duplicates are more common in long-insert
+libraries, and their presence can skew mate-pair statistics
+that are used by many assemblers for scaffolding.
+When their identities are known, rRNA and other
+RNA contaminants should also be removed to improve
+assembly speed.
+那些工具可以支持这些操作。
+
+12.Alternative
+transcription start and stop sites can also be inferred
+based on the 5′ cap or poly(A) signals (if cap- or endspecific
+experimental protocols are used)51,53
+51：Nagalakshmi, U. et al. The transcriptional landscape
+of the yeast genome defined by RNA sequencing.
+Science 320, 1344–1349 (2008).
+53：Ozsolak, F. et al. Comprehensive polyadenylation
+site maps in yeast and human reveal pervasive
+alternative polyadenylation. Cell 143, 1018–1029
+(2010).
