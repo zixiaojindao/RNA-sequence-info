@@ -93,3 +93,11 @@ have lower expression levels.
 
 10. combined reference-based and de novo strageties:
 如果reference 质量高，先reference 
+
+11.data structures need to accommodate multiple
+transcripts per locus, owing to alternative splicing.
+这句话这么理解：由于rna是选择性的剪接了dna，所以不同的rna
+可能剪接了同一段dna序列，所以在构建的de bruijn graph中，
+一个碱基对可能被多条rna经过使用。
+
+
