@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://boyun.sh.cn/bio/?p=1901 -->
+<html dir="ltr" lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Fastq格式详解 | 博耘生物</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="./Fastq格式详解   博耘生物_files/style.css">
+<link rel="pingback" href="http://boyun.sh.cn/bio/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://boyun.sh.cn/bio/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » Feed" href="http://boyun.sh.cn/bio/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » 评论 Feed" href="http://boyun.sh.cn/bio/?feed=comments-rss2">
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » Fastq格式详解 评论 Feed" href="http://boyun.sh.cn/bio/?feed=rss2&p=1901">
+<script type="text/javascript" src="./Fastq格式详解   博耘生物_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://boyun.sh.cn/bio/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://boyun.sh.cn/bio/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="paired-end reads的拼接" href="http://boyun.sh.cn/bio/?p=1903">
+<link rel="next" title="RNA-seq拼接结果数据提交NCBI" href="http://boyun.sh.cn/bio/?p=1922">
+<meta name="generator" content="WordPress 3.3.1">
+
+<!-- All in One SEO Pack 1.6.15.2 by Michael Torbert of Semper Fi Web Design[411,450] -->
+<meta name="keywords" content="fastq">
+<link rel="canonical" href="./Fastq格式详解   博耘生物_files/Fastq格式详解   博耘生物.htm">
+<!-- /all in one seo pack -->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+
+<body class="single single-post postid-1901 single-format-standard single-author singular two-column right-sidebar">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://boyun.sh.cn/bio/" title="博耘生物" rel="home">博耘生物</a></span></h1>
+				<h2 id="site-description">嗯，生物信息方面的</h2>
+			</hgroup>
+
+						<a href="http://boyun.sh.cn/bio/">
+									<img src="./Fastq格式详解   博耘生物_files/genomes.png" width="1000" height="288" alt="">
+							</a>
+			
+								<form method="get" id="searchform" action="http://boyun.sh.cn/bio/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="http://boyun.sh.cn/bio/?p=1901#content" title="Skip to primary content">Skip to primary content</a></div>
+				<div class="skip-link"><a class="assistive-text" href="http://boyun.sh.cn/bio/?p=1901#secondary" title="Skip to secondary content">Skip to secondary content</a></div>
+								<div class="menu"><ul><li><a href="http://boyun.sh.cn/bio/" title="首页">首页</a></li><li class="page_item page-item-1425"><a href="http://boyun.sh.cn/bio/?page_id=1425">写作计划</a></li><li class="page_item page-item-1427"><a href="http://boyun.sh.cn/bio/?page_id=1427">博耘足迹</a></li><li class="page_item page-item-1412"><a href="http://boyun.sh.cn/bio/?page_id=1412">版权声明</a></li><li class="page_item page-item-193"><a href="http://boyun.sh.cn/bio/?page_id=193">生物信息学的阶梯</a><ul class="children"><li class="page_item page-item-92"><a href="http://boyun.sh.cn/bio/?page_id=92">生物信息学的阶梯-初级</a></li><li class="page_item page-item-221"><a href="http://boyun.sh.cn/bio/?page_id=221">生物信息学的阶梯-高级</a></li><li class="page_item page-item-214"><a href="http://boyun.sh.cn/bio/?page_id=214">生物信息学的阶梯-初中级</a></li><li class="page_item page-item-216"><a href="http://boyun.sh.cn/bio/?page_id=216">生物信息学的阶梯-中级</a></li><li class="page_item page-item-219"><a href="http://boyun.sh.cn/bio/?page_id=219">生物信息学的阶梯-初高级</a></li></ul></li><li class="page_item page-item-468"><a href="http://boyun.sh.cn/bio/?page_id=468">生物信息的学人才需求</a></li><li class="page_item page-item-1495"><a href="http://boyun.sh.cn/bio/?page_id=1495">留言板</a></li><li class="page_item page-item-1422"><a href="http://boyun.sh.cn/bio/?page_id=1422">网站地图</a></li><li class="page_item page-item-1418"><a href="http://boyun.sh.cn/bio/?page_id=1418">联系我们</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://boyun.sh.cn/bio/?p=1903" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="http://boyun.sh.cn/bio/?p=1922" rel="next">Next <span class="meta-nav">→</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1901" class="post-1901 post type-post status-publish format-standard hentry category-ngs category-12 tag-fastq">
+	<header class="entry-header">
+		<h1 class="entry-title">Fastq格式详解</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="./Fastq格式详解   博耘生物_files/Fastq格式详解   博耘生物.htm" title="16:17" rel="bookmark"><time class="entry-date" datetime="2012-08-13T16:17:40+00:00" pubdate="">2012 年 8 月 13 日</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://boyun.sh.cn/bio/?author=1" title="View all posts by boyun" rel="author">boyun</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>FASTQ是基于文本的，保存生物序列（通常是核酸序列）和其测序质量信息的标准格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是将FASTA序列与质量数据放到一起，目前已经成为高通量测序结果的事实标准。</p>
+<h2>格式说明</h2>
+<p>FASTQ文件中每个序列通常有四行：</p>
+<ol>
+<li>序列标识以及相关的描述信息，以‘@’开头；</li>
+<li>第二行是序列</li>
+<li>第三行以‘+’开头，后面是序列标示符、描述信息，或者什么也不加</li>
+<li>第四行，是质量信息，和第二行的序列相对应，每一个序列都有一个质量评分，根据评分体系的不同，每个字符的含义表示的数字也不相同。</li>
+</ol>
+<div>例如：</div>
+<div>
+<pre>@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65</pre>
+</div>
+<h3><span id="more-1901"></span>&nbsp;Illumina sequence identifiers</h3>
+<pre>@HWUSI-EAS100R:6:73:941:1973#0/1</pre>
+<table class="wikitable">
+<tbody>
+<tr>
+<th>HWUSI-EAS100R</th>
+<td>the unique instrument name</td>
+</tr>
+<tr>
+<th>6</th>
+<td>flowcell lane</td>
+</tr>
+<tr>
+<th>73</th>
+<td>tile number within the flowcell lane</td>
+</tr>
+<tr>
+<th>941</th>
+<td>‘x’-coordinate of the cluster within the tile</td>
+</tr>
+<tr>
+<th>1973</th>
+<td>‘y’-coordinate of the cluster within the tile</td>
+</tr>
+<tr>
+<th>#0</th>
+<td>index number for a multiplexed sample (0 for no indexing)</td>
+</tr>
+<tr>
+<th>/1</th>
+<td>the member of a pair, /1 or /2 <em>(paired-end or mate-pair reads only)</em></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<pre>@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG</pre>
+<table class="wikitable">
+<tbody>
+<tr>
+<th>EAS139</th>
+<td>the unique instrument name</td>
+</tr>
+<tr>
+<th>136</th>
+<td>the run id</td>
+</tr>
+<tr>
+<th>FC706VJ</th>
+<td>the flowcell id</td>
+</tr>
+<tr>
+<th>2</th>
+<td>flowcell lane</td>
+</tr>
+<tr>
+<th>2104</th>
+<td>tile number within the flowcell lane</td>
+</tr>
+<tr>
+<th>15343</th>
+<td>‘x’-coordinate of the cluster within the tile</td>
+</tr>
+<tr>
+<th>197393</th>
+<td>‘y’-coordinate of the cluster within the tile</td>
+</tr>
+<tr>
+<th>1</th>
+<td>the member of a pair, 1 or 2 <em>(paired-end or mate-pair reads only)</em></td>
+</tr>
+<tr>
+<th>Y</th>
+<td>Y if the read fails filter (read is bad), N otherwise</td>
+</tr>
+<tr>
+<th>18</th>
+<td>0 when none of the control bits are on, otherwise it is an even number</td>
+</tr>
+<tr>
+<th>ATCACG</th>
+<td>index sequence</td>
+</tr>
+</tbody>
+</table>
+<h3>&nbsp;NCBI Sequence Read Archive</h3>
+<pre>@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACC
++SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC</pre>
+<h2>关于质量编码格式</h2>
+<p>质量评分指的是一个碱基的错误概率的对数值。其最初在Phred拼接软件中定义与使用，其后在许多软件中得到使用。其质量得分与错误概率的对应关系见下表：</p>
+<table class="wikitable">
+<caption>Phred quality scores are logarithmically linked to error probabilities</caption>
+<tbody>
+<tr>
+<th>Phred Quality Score</th>
+<th>Probability of incorrect base call</th>
+<th>Base call accuracy</th>
+</tr>
+<tr>
+<td>10</td>
+<td>1 in 10</td>
+<td>90&nbsp;%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1 in 100</td>
+<td>99&nbsp;%</td>
+</tr>
+<tr>
+<td>30</td>
+<td>1 in 1000</td>
+<td>99.9&nbsp;%</td>
+</tr>
+<tr>
+<td>40</td>
+<td>1 in 10000</td>
+<td>99.99&nbsp;%</td>
+</tr>
+<tr>
+<td>50</td>
+<td>1 in 100000</td>
+<td>99.999&nbsp;%</td>
+</tr>
+</tbody>
+</table>
+<pre>Phred quality scores Q are defined as a property which is logarithmically related to the base-calling error probabilities P.<a href="./Fastq格式详解   博耘生物_files/27965b367978f44297efd5b3544bae04.png"><img class="alignnone size-full wp-image-1913" title="27965b367978f44297efd5b3544bae04" src="./Fastq格式详解   博耘生物_files/27965b367978f44297efd5b3544bae04.png" alt="" width="145" height="19"></a></pre>
+<p>除了Phred质量得分换算标准，还有就是Solexa标准：<br>
+<a href="./Fastq格式详解   博耘生物_files/9b81bbe1abc9e35158072bbe82130b9c.png"><img class="alignnone size-full wp-image-1914" title="9b81bbe1abc9e35158072bbe82130b9c" src="./Fastq格式详解   博耘生物_files/9b81bbe1abc9e35158072bbe82130b9c.png" alt="" width="297" height="40"></a></p>
+<p>两种换算标准的比较：</p>
+<div id="attachment_1915" class="wp-caption alignnone" style="width: 784px"><a href="./Fastq格式详解   博耘生物_files/774px-Probability_metrics.svg_.png"><img class="size-full wp-image-1915" title="774px-Probability_metrics.svg" src="./Fastq格式详解   博耘生物_files/774px-Probability_metrics.svg_.png" alt="" width="774" height="451"></a><p class="wp-caption-text">Relationship between Q and p using the Sanger (red) and Solexa (black) equations (described above). The vertical dotted line indicates p = 0.05, or equivalently, Q ≈ 13.</p></div>
+<p>对于每个碱基的质量编码标示，不同的软件采用不同的方案，目前有5种方案：</p>
+<ul>
+<li>Sanger，Phred quality score，值的范围从0到92，对应的ASCII码从33到126，但是对于测序数据（raw read data）质量得分通常小于60，序列拼接或者mapping可能用到更大的分数。</li>
+<li>Solexa/Illumina 1.0, Solexa/Illumina quality score，值的范围从-5到63，对应的ASCII码从59到126，对于测序数据，得分一般在-5到40之间；</li>
+<li>Illumina 1.3+，<a title="Phred quality score" href="http://en.wikipedia.org/wiki/Phred_quality_score">Phred quality scor</a>e，值的范围从0到62对应的ASCII码从64到126，低于测序数据，得分在0到40之间；</li>
+<li>Illumina 1.5+，Phred quality score，但是0到2作为另外的标示，详见http://solexaqa.sourceforge.net/questions.htm#illumina</li>
+<li>Illumina 1.8+</li>
+</ul>
+<p>下面是更为直观的表示：</p>
+<pre>  SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS.....................................................
+  ..........................XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX......................
+  ...............................IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII......................
+  .................................<strong>J</strong>JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ......................
+  LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL....................................................
+  !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+  |                         |    |        |                              |                     |
+ 33                        59   64       73                            104                   126
+
+ S - Sanger        Phred+33,  raw reads typically (0, 40)
+ X - Solexa        Solexa+64, raw reads typically (-5, 40)
+ I - Illumina 1.3+ Phred+64,  raw reads typically (0, 40)
+ J - Illumina 1.5+ Phred+64,  raw reads typically (3, 40)
+    with 0=unused, 1=unused, 2=Read Segment Quality Control Indicator (bold)
+    (Note: See discussion above).
+ L - Illumina 1.8+ Phred+33,  raw reads typically (0, 41)</pre>
+<h2>&nbsp;文件后缀</h2>
+<p>没有特别的规定，通常使用.fq, .fastq, .txt等。</p>
+<p>格式转换：</p>
+<ul>
+<li><a title="BioPython" href="http://en.wikipedia.org/wiki/BioPython">Biopython</a> version 1.51 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a title="EMBOSS" href="http://en.wikipedia.org/wiki/EMBOSS">EMBOSS</a> version 6.1.0 patch 1 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a title="BioPerl" href="http://en.wikipedia.org/wiki/BioPerl">BioPerl</a> version 1.6.1 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a title="BioRuby" href="http://en.wikipedia.org/wiki/BioRuby">BioRuby</a> version 1.4.0 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a title="BioJava" href="http://en.wikipedia.org/wiki/BioJava">BioJava</a> version 1.7.1 to 1.8.x (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a href="http://maq.sourceforge.net/" rel="nofollow">MAQ</a> can convert from Solexa to Sanger (use this <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2824334&group_id=191815&atid=938893" rel="nofollow">patch</a> to support Illumina 1.3+ files).</li>
+<li><a href="http://hannonlab.cshl.edu/fastx_toolkit/" rel="nofollow">fastx_toolkit</a> The included fastq_quality_converter program can convert Illumina to Sanger</li>
+</ul>
+<h2>&nbsp;参考以及相关链接</h2>
+<ul>
+<li><span style="color: #333333; font-style: normal; line-height: 24px;"><a href="http://en.wikipedia.org/wiki/FASTQ_format" target="_blank">http://en.wikipedia.org/wiki/FASTQ_format</a></span></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/books/NBK47537/" target="_blank">http://www.ncbi.nlm.nih.gov/books/NBK47537/</a></li>
+<li>Cock et al (2009) The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic Acids Research, <a title="Digital object identifier" href="http://en.wikipedia.org/wiki/Digital_object_identifier">doi</a>:<a href="http://dx.doi.org/10.1093%2Fnar%2Fgkp1137" rel="nofollow">10.1093/nar/gkp1137</a></li>
+<li><a href="http://maq.sourceforge.net/fastq.shtml" rel="nofollow">MAQ</a> webpage discussing FASTQ variants</li>
+<li><a href="http://bitbucket.org/galaxy/galaxy-central/src/tip/tools/fastq/" rel="nofollow">Galaxy fastq tools</a></li>
+<li><a href="http://hannonlab.cshl.edu/fastx_toolkit/" rel="nofollow">Fastx toolkit</a> collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing</li>
+<li><a href="http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/" rel="nofollow">Fastqc</a> quality control tool for high throughput sequence data</li>
+<li><a href="http://www.illumina.com.cn/index.asp" target="_blank">http://www.illumina.com.cn/index.asp</a></li>
+</ul>
+<div id="crp_related" class="crp_related"><h3>相关文章：</h3><ul><li><a href="http://boyun.sh.cn/bio/?p=1943" rel="bookmark" class="crp_title">RNA-seq差异表达基因分析之TopHat篇</a></li><li><a href="http://boyun.sh.cn/bio/?p=1903" rel="bookmark" class="crp_title">paired-end reads的拼接</a></li><li><a href="http://boyun.sh.cn/bio/?p=1665" rel="bookmark" class="crp_title">新兴互联网技术在生物信息学中的应用</a></li><li><a href="http://boyun.sh.cn/bio/?p=1933" rel="bookmark" class="crp_title">使用速铂Aspera下载NGS数据</a></li><li><a href="http://boyun.sh.cn/bio/?p=1897" rel="bookmark" class="crp_title">文章来源数据拼接的一下实践</a></li><li><a href="http://boyun.sh.cn/bio/?p=1862" rel="bookmark" class="crp_title">二代测序数据预处理与分析</a></li><li><a href="http://boyun.sh.cn/bio/?p=1467" rel="bookmark" class="crp_title">Blast本地化：window平台下blast软件的安装</a></li><li><a href="http://boyun.sh.cn/bio/?p=1615" rel="bookmark" class="crp_title">南北极新物种</a></li><li><a href="http://boyun.sh.cn/bio/?p=1555" rel="bookmark" class="crp_title">十大奇特物种交配方式</a></li><li><a href="http://boyun.sh.cn/bio/?p=1890" rel="bookmark" class="crp_title">SAM格式定义</a></li></ul></div><div class="" id="s_widget"><h3>新书推荐</h3><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" width="336px" height="280px"> <param name="movie" value="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=GetDisplayTemplate"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowscriptaccess" value="always"><embed src="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=GetDisplayTemplate" id="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" quality="high" bgcolor="#ffffff" name="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" allowscriptaccess="always" type="application/x-shockwave-flash" align="middle" height="280px" width="336px"></object> <noscript>&lt;A HREF="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=NoScript"&gt;Amazon.cn Widgets&lt;/A&gt;</noscript></div><div id="paper_license"><div> 　» 转载文章请注明，转载自：<a title="博耘生物" href="http://boyun.sh.cn/bio">博耘生物</a> » <a rel="bookmark" title="Fastq格式详解" href="./Fastq格式详解   博耘生物_files/Fastq格式详解   博耘生物.htm">《Fastq格式详解》</a></div><div>　» 原文链接：<a rel="bookmark" title="Fastq格式详解" href="./Fastq格式详解   博耘生物_files/Fastq格式详解   博耘生物.htm">http://boyun.sh.cn/bio/?p=1901</a></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://boyun.sh.cn/bio/?cat=121" title="查看 NGS 中的全部文章" rel="category">NGS</a>, <a href="http://boyun.sh.cn/bio/?cat=12" title="查看 数据格式 中的全部文章" rel="category">数据格式</a> and tagged <a href="http://boyun.sh.cn/bio/?tag=fastq" rel="tag">Fastq</a> by <a href="http://boyun.sh.cn/bio/?author=1">boyun</a>. Bookmark the <a href="./Fastq格式详解   博耘生物_files/Fastq格式详解   博耘生物.htm" title="Permalink to Fastq格式详解" rel="bookmark">permalink</a>.		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-1901 -->
+
+						<div id="comments">
+	
+	
+			<h2 id="comments-title">
+			2 thoughts on “<span>Fastq格式详解</span>”		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="comment byuser comment-author-boyun bypostauthor even thread-even depth-1" id="li-comment-779">
+		<article id="comment-779" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="./Fastq格式详解   博耘生物_files/82861b55eca4d6996c4a202fd40f420b" class="avatar avatar-68 photo" height="68" width="68"><span class="fn">boyun</span> on <a href="http://boyun.sh.cn/bio/?p=1901#comment-779"><time pubdate="" datetime="2012-10-17T13:09:46+00:00">2012 年 10 月 17 日 at 13:09</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>根据质量编码格式，fastq有多重变体，得到一个fastq文件，如何知道其编码格式（Detection of FASTQ variants）？确定其质量编码格式是许多分析处理的前提，有没有直接的简单的方法来判断？质量编码格式共有五种格式：</p>
+<pre>Sanger (Phred+33, 33 to 73)
+Solexa (Phred+64, 59 to 104)
+Illumina (1.3+) (Phred+64, 64 to 104)
+Illumina (1.5+) (Phred+64, 66 to 104)
+Illumina (1.8+) (Phred+33, 33 to 74)
+</pre>
+<p>具体的字母表示范围文章所示，通过扫描扫Fastq文件中的质量范围，从而推出其质量编码格式。QC Toolkit就是采用这种方式对编码格式进行自动判断，perl代码如下：</p>
+<pre>my $file = $_[0];
+my $isVariantIdntfcntOn = $_[1];
+my $lines = 0;
+open(F, "&lt; $file") or die "Can not open file $file\n";
+my $counter = 0;
+my $minVal = 1000;
+my $maxVal = 0;
+while(my $line = <f>) {
+	$lines++;
+	$counter++;
+	next if($line =~ /^\n$/);
+	if($counter == 1 &amp;&amp; $line !~ /^\@/) {
+		prtErrorExit("Invalid FASTQ file format.\n\t\tFile: $file");
+	}
+	if($counter == 3 &amp;&amp; $line !~ /^\+/) {
+		prtErrorExit("Invalid FASTQ file format.\n\t\tFile: $file");
+	}
+	if($counter == 4 &amp;&amp; $lines &lt; 1000000) {
+		chomp $line;
+		my @ASCII = unpack("C*", $line);
+		$minVal = min(min(@ASCII), $minVal);
+		$maxVal = max(max(@ASCII), $maxVal);
+	}
+	if($counter == 4) {
+		$counter = 0;
+	}
+}
+close(F);
+my $tseqFormat = 0;
+if($minVal &gt;= 33 &amp;&amp; $minVal &lt; = 73 &amp;&amp; $maxVal &gt;= 33 &amp;&amp; $maxVal &lt; = 73) {
+	$tseqFormat = 1;
+}
+elsif($minVal &gt;= 66 &amp;&amp; $minVal &lt; = 105 &amp;&amp; $maxVal &gt;= 66 &amp;&amp; $maxVal &lt; = 105) {
+	$tseqFormat = 4;			# Illumina 1.5+
+}
+elsif($minVal &gt;= 64 &amp;&amp; $minVal &lt; = 105 &amp;&amp; $maxVal &gt;= 64 &amp;&amp; $maxVal &lt; = 105) {
+	$tseqFormat = 3;			# Illumina 1.3+
+}
+elsif($minVal &gt;= 59 &amp;&amp; $minVal &lt; = 105 &amp;&amp; $maxVal &gt;= 59 &amp;&amp; $maxVal &lt; = 105) {
+	$tseqFormat = 2;			# Solexa
+}
+elsif($minVal &gt;= 33 &amp;&amp; $minVal &lt; = 74 &amp;&amp; $maxVal &gt;= 33 &amp;&amp; $maxVal &lt; = 74) {
+	$tseqFormat = 5;			# Illumina 1.8+
+}
+if($isVariantIdntfcntOn) {
+	$seqFormat = $tseqFormat;
+}
+else {
+	if($tseqFormat != $seqFormat) {
+		print STDERR "Warning: It seems the specified variant of FASTQ doesn't match the quality values in input FASTQ files.\n";
+	}
+}
+</f></pre>
+
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://boyun.sh.cn/bio/index.php?p=1901&replytocom=779#respond" onclick="return addComment.moveForm(&quot;comment-779&quot;, &quot;779&quot;, &quot;respond&quot;, &quot;1901&quot;)">Reply <span>↓</span></a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li>
+	<li class="post pingback">
+		<p>Pingback: <a href="http://boyun.sh.cn/bio/?p=1943" rel="external nofollow" class="url">RNA-seq差异表达基因分析之TopHat篇 | 博耘生物</a></p>
+	</li>
+		</ol>
+
+		
+	
+									<div id="respond">
+				<h3 id="reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://boyun.sh.cn/bio/index.php?p=1901#respond" style="display:none;">取消回复</a></small></h3>
+									<form action="http://boyun.sh.cn/bio/wp-comments-post.php" method="post" id="commentform">
+																			<p class="comment-notes">电子邮件地址不会被公开。 必填项已用 <span class="required">*</span> 标注</p>							<p class="comment-form-author"><label for="author">姓名</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">电子邮件</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">站点</label><input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">评论</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">您可以使用这些 <abbr title="HyperText Markup Language">HTML</abbr> 标签和属性： <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="发表评论">
+							<input type="hidden" name="comment_post_ID" value="1901" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="be6f43eab1"></p>					</form>
+							</div><!-- #respond -->
+						
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="one">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text"><h3 class="widget-title">版权协议</h3>			<div class="textwidget">本站采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本站内容必须也遵循“署名-非商业用途-保持一致”的创作共用协议.</div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+	</div><!-- #supplementary -->
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://boyun.sh.cn/bio/?p=1890 -->
+<html dir="ltr" lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>SAM格式定义 | 博耘生物</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="./SAM格式定义   博耘生物_files/style.css">
+<link rel="pingback" href="http://boyun.sh.cn/bio/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://boyun.sh.cn/bio/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » Feed" href="http://boyun.sh.cn/bio/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » 评论 Feed" href="http://boyun.sh.cn/bio/?feed=comments-rss2">
+<link rel="alternate" type="application/rss+xml" title="博耘生物 » SAM格式定义 评论 Feed" href="http://boyun.sh.cn/bio/?feed=rss2&p=1890">
+<script type="text/javascript" src="./SAM格式定义   博耘生物_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://boyun.sh.cn/bio/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://boyun.sh.cn/bio/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="生物信息之心态分析" href="http://boyun.sh.cn/bio/?p=1879">
+<link rel="next" title="也谈统计分析" href="http://boyun.sh.cn/bio/?p=1893">
+<meta name="generator" content="WordPress 3.3.1">
+
+<!-- All in One SEO Pack 1.6.15.2 by Michael Torbert of Semper Fi Web Design[411,448] -->
+<meta name="keywords" content="ngs,序列比对">
+<link rel="canonical" href="./SAM格式定义   博耘生物_files/SAM格式定义   博耘生物.htm">
+<!-- /all in one seo pack -->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+
+<body class="single single-post postid-1890 single-format-standard single-author singular two-column right-sidebar">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://boyun.sh.cn/bio/" title="博耘生物" rel="home">博耘生物</a></span></h1>
+				<h2 id="site-description">嗯，生物信息方面的</h2>
+			</hgroup>
+
+						<a href="http://boyun.sh.cn/bio/">
+									<img src="./SAM格式定义   博耘生物_files/genomes.png" width="1000" height="288" alt="">
+							</a>
+			
+								<form method="get" id="searchform" action="http://boyun.sh.cn/bio/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="http://boyun.sh.cn/bio/?p=1890#content" title="Skip to primary content">Skip to primary content</a></div>
+				<div class="skip-link"><a class="assistive-text" href="http://boyun.sh.cn/bio/?p=1890#secondary" title="Skip to secondary content">Skip to secondary content</a></div>
+								<div class="menu"><ul><li><a href="http://boyun.sh.cn/bio/" title="首页">首页</a></li><li class="page_item page-item-1425"><a href="http://boyun.sh.cn/bio/?page_id=1425">写作计划</a></li><li class="page_item page-item-1427"><a href="http://boyun.sh.cn/bio/?page_id=1427">博耘足迹</a></li><li class="page_item page-item-1412"><a href="http://boyun.sh.cn/bio/?page_id=1412">版权声明</a></li><li class="page_item page-item-193"><a href="http://boyun.sh.cn/bio/?page_id=193">生物信息学的阶梯</a><ul class="children"><li class="page_item page-item-92"><a href="http://boyun.sh.cn/bio/?page_id=92">生物信息学的阶梯-初级</a></li><li class="page_item page-item-221"><a href="http://boyun.sh.cn/bio/?page_id=221">生物信息学的阶梯-高级</a></li><li class="page_item page-item-214"><a href="http://boyun.sh.cn/bio/?page_id=214">生物信息学的阶梯-初中级</a></li><li class="page_item page-item-216"><a href="http://boyun.sh.cn/bio/?page_id=216">生物信息学的阶梯-中级</a></li><li class="page_item page-item-219"><a href="http://boyun.sh.cn/bio/?page_id=219">生物信息学的阶梯-初高级</a></li></ul></li><li class="page_item page-item-468"><a href="http://boyun.sh.cn/bio/?page_id=468">生物信息的学人才需求</a></li><li class="page_item page-item-1495"><a href="http://boyun.sh.cn/bio/?page_id=1495">留言板</a></li><li class="page_item page-item-1422"><a href="http://boyun.sh.cn/bio/?page_id=1422">网站地图</a></li><li class="page_item page-item-1418"><a href="http://boyun.sh.cn/bio/?page_id=1418">联系我们</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://boyun.sh.cn/bio/?p=1879" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="http://boyun.sh.cn/bio/?p=1893" rel="next">Next <span class="meta-nav">→</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1890" class="post-1890 post type-post status-publish format-standard hentry category-rna-seq category-9 category-12 tag-ngs tag-62">
+	<header class="entry-header">
+		<h1 class="entry-title">SAM格式定义</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="./SAM格式定义   博耘生物_files/SAM格式定义   博耘生物.htm" title="17:09" rel="bookmark"><time class="entry-date" datetime="2012-07-20T17:09:06+00:00" pubdate="">2012 年 7 月 20 日</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://boyun.sh.cn/bio/?author=1" title="View all posts by boyun" rel="author">boyun</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>SAM是一种序列比对格式标准， 由sanger制定，是以TAB为分割符的文本格式。主要应用于测序序列mapping到基因组上的结果表示，当然也可以表示任意的多重比对结果。</p>
+<p>不同的软件，不同的时期，不同的研究方向，都会创建一种或者多种格式标准，当然根据当时的需要，创建符合需求的标准，也是最容易的事情，而反过来想要真正的理解标准，也必须理解为什么要创建这样的标准，解决什么样的需要。我前面的有篇文章已经对于现有的多重比对的格式进行总结，但其更多的站在比较基因组学的角度。当我们去了解sam标准格式是什么的时候，就要思考既然以及有了这么多得标准，为什么还要定义SAM标准，当然拿所有的格式进行比较也并非易事，但是简单的对比，就可以了解其中一二，比如aln格式，是比对视图化的展示，存储的信息不够结构化，无法方便的作为另外程序的输入；表示信息的有限性，如果100个多重比对序列放到一个文件中，查看维护就会非常困难；还有些格式标准挺强大，但是太繁琐，同时不够灵活。那么反过来就是SAM格式的优点，那么SAM如何做到这一点的呢？<span id="more-1890"></span></p>
+<p>SAM要处理好的问题：</p>
+<ul>
+<li>非常多序列（read)，mapping到多个参考基因组（reference）上；</li>
+<li>同一条序列，分多段（segment）比对到参考基因组上；</li>
+<li>无限量的，结构化信息表示，包括错配、删除、插入等比对信息；</li>
+</ul>
+<p>SAM分为两部分，注释信息（header section）和比对结果部分（alignment section），注释信息可有可无，都是以@开头，用不同的tag表示不同的信息，主要有@HD，说明符合标准的版本、对比序列的排列顺序；@SQ，参考序列说明；@RG，比对上的序列（read）说明；@PG，使用的程序说明；@CO，任意的说明信息。</p>
+<p><a href="./SAM格式定义   博耘生物_files/btp352f1.jpg"><img class="alignnone size-full wp-image-1891" title="SAM格式示例" src="./SAM格式定义   博耘生物_files/btp352f1.jpg" alt="SAM格式示例" width="447" height="360"></a></p>
+<p>比对结果部分（alignment section），每一行表示一个片段（segment）的比对信息，包括11个必须的字段（mandatory fields）和一个可选的字段，字段之间用tag分割。必须的字段有11个，顺序固定，不可用时，根据字段定义，可以为’0‘或者’*‘，这是11个字段包括：</p>
+<ol>
+<li>QNAME，比对片段的（template）的编号；</li>
+<li>FLAG，位标识，template mapping情况的数字表示，每一个数字代表一种比对情况，这里的值是符合情况的数字相加总和；</li>
+<li>RNAME，参考序列的编号，如果注释中对SQ-SN进行了定义，这里必须和其保持一致，另外对于没有mapping上的序列，这里是’*‘；</li>
+<li>POS，比对上的位置，注意是从1开始计数，没有比对上，此处为0；</li>
+<li>MAPQ，mappint的质量；</li>
+<li>CIGAR，简要比对信息表达式（Compact Idiosyncratic Gapped Alignment Report），其以参考序列为基础，使用数字加字母表示比对结果，比如3S6M1P1I4M，前三个碱基被剪切去除了，然后6个比对上了，然后打开了一个缺口，有一个碱基插入，最后是4个比对上了，是按照顺序的；</li>
+<li>RNEXT，下一个片段比对上的参考序列的编号，没有另外的片段，这里是’*‘，同一个片段，用’=‘；</li>
+<li>PNEXT，下一个片段比对上的位置，如果不可用，此处为0；</li>
+<li>TLEN，Template的长度，最左边得为正，最右边的为负，中间的不用定义正负，不分区段（single-segment)的比对上，或者不可用时，此处为0；</li>
+<li>SEQ，序列片段的序列信息，如果不存储此类信息，此处为’*‘，注意CIGAR中M/I/S/=/X对应数字的和要等于序列长度；</li>
+<li>QUAL，序列的质量信息，格式同FASTQ一样。</li>
+</ol>
+<p>可选字段（optional fields)，格式如：TAG:TYPE:VALUE，其中TAG有两个大写字母组成，每个TAG代表一类信息，每一行一个TAG只能出现一次，TYPE表示TAG对应值的类型，可以是字符串、整数、字节、数组等。</p>
+<p>要注意的几个概念，以及与之对应的模型：</p>
+<ul>
+<li>reference</li>
+<li>read</li>
+<li>segment</li>
+<li>template（参考序列和比对上的序列共同组成的序列为template）</li>
+<li>alignment</li>
+<li>seq</li>
+</ul>
+<p>参考<br>
+SAM的定义：<br>
+<a href="http://samtools.sourceforge.net/SAM1.pdf" target="_blank">http://samtools.sourceforge.net/SAM1.pdf</a><br>
+发表的文献：<br>
+<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2723002/" target="_blank">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2723002/</a><br>
+CIGAR的概念<br>
+<a href="http://asia.ensembl.org/common/Help/Glossary?db=core">http://asia.ensembl.org/common/Help/Glossary?db=core</a><br>
+一篇博客对于sam的解释<br>
+<a href="http://davetang.org/wiki/tiki-index.php?page=SAM">http://davetang.org/wiki/tiki-index.php?page=SAM</a><br>
+perl模块<br>
+<a href="http://search.cpan.org/~lds/Bio-SamTools/lib/Bio/DB/Sam.pm" target="_blank">http://search.cpan.org/~lds/Bio-SamTools/lib/Bio/DB/Sam.pm</a></p>
+<div id="crp_related" class="crp_related"><h3>相关文章：</h3><ul><li><a href="http://boyun.sh.cn/bio/?p=1933" rel="bookmark" class="crp_title">使用速铂Aspera下载NGS数据</a></li><li><a href="http://boyun.sh.cn/bio/?p=1943" rel="bookmark" class="crp_title">RNA-seq差异表达基因分析之TopHat篇</a></li><li><a href="http://boyun.sh.cn/bio/?p=1862" rel="bookmark" class="crp_title">二代测序数据预处理与分析</a></li><li><a href="http://boyun.sh.cn/bio/?p=1901" rel="bookmark" class="crp_title">Fastq格式详解</a></li><li><a href="http://boyun.sh.cn/bio/?p=1574" rel="bookmark" class="crp_title">流感病毒数据库：Influenza Virus Resources</a></li><li><a href="http://boyun.sh.cn/bio/?p=1758" rel="bookmark" class="crp_title">构建批量基因结构域鉴定分析平台</a></li><li><a href="http://boyun.sh.cn/bio/?p=1922" rel="bookmark" class="crp_title">RNA-seq拼接结果数据提交NCBI</a></li><li><a href="http://boyun.sh.cn/bio/?p=1665" rel="bookmark" class="crp_title">新兴互联网技术在生物信息学中的应用</a></li><li><a href="http://boyun.sh.cn/bio/?p=117" rel="bookmark" class="crp_title">探索—基因组学、蛋白质组学和生物信息学（第二版）</a></li><li><a href="http://boyun.sh.cn/bio/?p=1833" rel="bookmark" class="crp_title">主流的生物信息数据库模型</a></li></ul></div><div class="" id="s_widget"><h3>新书推荐</h3><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" width="336px" height="280px"> <param name="movie" value="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=GetDisplayTemplate"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowscriptaccess" value="always"><embed src="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=GetDisplayTemplate" id="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" quality="high" bgcolor="#ffffff" name="Player_06bf285e-0552-41e0-a053-a8d8abf24ef8" allowscriptaccess="always" type="application/x-shockwave-flash" align="middle" height="280px" width="336px"></object> <noscript>&lt;A HREF="http://ws.assoc-amazon.cn/widgets/q?ServiceVersion=20070822&amp;MarketPlace=CN&amp;ID=V20070822%2FCN%2Fboyun%2F8003%2F06bf285e-0552-41e0-a053-a8d8abf24ef8&amp;Operation=NoScript"&gt;Amazon.cn Widgets&lt;/A&gt;</noscript></div><div id="paper_license"><div> 　» 转载文章请注明，转载自：<a title="博耘生物" href="http://boyun.sh.cn/bio">博耘生物</a> » <a rel="bookmark" title="SAM格式定义" href="./SAM格式定义   博耘生物_files/SAM格式定义   博耘生物.htm">《SAM格式定义》</a></div><div>　» 原文链接：<a rel="bookmark" title="SAM格式定义" href="./SAM格式定义   博耘生物_files/SAM格式定义   博耘生物.htm">http://boyun.sh.cn/bio/?p=1890</a></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://boyun.sh.cn/bio/?cat=82" title="查看 RNA-SEQ专题 中的全部文章" rel="category">RNA-SEQ专题</a>, <a href="http://boyun.sh.cn/bio/?cat=9" title="查看 数据分析 中的全部文章" rel="category">数据分析</a>, <a href="http://boyun.sh.cn/bio/?cat=12" title="查看 数据格式 中的全部文章" rel="category">数据格式</a> and tagged <a href="http://boyun.sh.cn/bio/?tag=ngs" rel="tag">NGS</a>, <a href="http://boyun.sh.cn/bio/?tag=%e5%ba%8f%e5%88%97%e6%af%94%e5%af%b9" rel="tag">序列比对</a> by <a href="http://boyun.sh.cn/bio/?author=1">boyun</a>. Bookmark the <a href="./SAM格式定义   博耘生物_files/SAM格式定义   博耘生物.htm" title="Permalink to SAM格式定义" rel="bookmark">permalink</a>.		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-1890 -->
+
+						<div id="comments">
+	
+	
+			<h2 id="comments-title">
+			One thought on “<span>SAM格式定义</span>”		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="post pingback">
+		<p>Pingback: <a href="http://bio-spring.info/wp/?p=424" rel="external nofollow" class="url">生物信息学中的 SAM 格式介绍</a></p>
+	</li>
+		</ol>
+
+		
+	
+									<div id="respond">
+				<h3 id="reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://boyun.sh.cn/bio/index.php?p=1890#respond" style="display:none;">取消回复</a></small></h3>
+									<form action="http://boyun.sh.cn/bio/wp-comments-post.php" method="post" id="commentform">
+																			<p class="comment-notes">电子邮件地址不会被公开。 必填项已用 <span class="required">*</span> 标注</p>							<p class="comment-form-author"><label for="author">姓名</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">电子邮件</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">站点</label><input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">评论</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">您可以使用这些 <abbr title="HyperText Markup Language">HTML</abbr> 标签和属性： <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="发表评论">
+							<input type="hidden" name="comment_post_ID" value="1890" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2c894df6b7"></p>					</form>
+							</div><!-- #respond -->
+						
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="one">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text"><h3 class="widget-title">版权协议</h3>			<div class="textwidget">本站采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本站内容必须也遵循“署名-非商业用途-保持一致”的创作共用协议.</div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+	</div><!-- #supplementary -->
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+</body></html>

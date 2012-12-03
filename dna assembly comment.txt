@@ -1,0 +1,21 @@
+1. To date, only two de Bruijn graph assemblers have been shown to have the ability to assemble a mammalian-sized genome. ABySS (Simpson et al. 2009) assembled a human genome in 87 h on a cluster of 21 eight-core machines each with 16 GB of RAM (168 cores, 336 GB of RAM total). SOAPdenovo assembled a human genome in 40 h using a single computer with 32 cores and 512 GB of RAM (Li et al. 2010). Although these types of computing resources are not widely available, they are within reach for large-scale scientific centers.
+
+2. In theory, the size of the de Bruijn graph depends only on the size of the genome, including polymorphic alleles, and should be independent of the number of reads. However, because sequencing errors create their own graph nodes, increasing the number of reads inevitably increases the size of the de Bruijn graph. In the de novo assembly of human from short reads, SOAPdenovo reduced the number of 25-mers from 14.6 billion to 5.0 billion by correcting errors before constructing the de Bruijn graph (Li et al. 2010). Its error correction method first counts the number of occurrences of all k-mers in the reads and replaces any k-mers occurring less than three times with the highest frequency alternative k-mer.
+
+3. Although many short-read de novo assemblers have been developed, only two of them, ABySS and SOAPdenovo, are said to be capable of assembling human genomes de novo.
+
+4. SOAPdenovo was designed to run on a single large-memory supercomputer, in
+which about 150 Gb memory is needed to assemble
+a human genome. This is still a large memory
+requirement, but it is fairly feasible considering the
+computing resources that current large-scale human
+genomics research can access. ABySS, however,
+developed a novel distributed de Bruijn graph that
+could be run on Linux clusters with message
+passing interface (MPI) library. This is a core
+strength and essential innovation of ABySS, making
+it more accessible to a potentially wider range of
+users. In addition, ABySS is formally able to handle
+colour–space sequencing data in its updated
+version, whereas SOAPdenovo does not.
+
