@@ -1,0 +1,5 @@
+1.reads: Escherichia coli: http://www.ncbi.nlm.nih.gov/sra?term=SRX000429
+2.refseq: Escherichia coli: http://www.ncbi.nlm.nih.gov/nuccore?term=Escherichia%20coli%20str.%20K-12%20substr.%20MG1655
+
+3.reads: Schizosaccharomyces pombe
+4.refseq: Schizosaccharomyces pombe: ftp://ftp.sanger.ac.uk/pub2/yeast/pombe/ GFF or Chromosome_contigs directory.
