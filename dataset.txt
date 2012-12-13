@@ -1,5 +1,74 @@
-1.reads: Escherichia coli: http://www.ncbi.nlm.nih.gov/sra?term=SRX000429
-2.refseq: Escherichia coli: http://www.ncbi.nlm.nih.gov/nuccore?term=Escherichia%20coli%20str.%20K-12%20substr.%20MG1655
+refseq ncbi introducition:http://www.ncbi.nlm.nih.gov/books/NBK50679/
+refseq access: ftp://ftp.ncbi.nlm.nih.gov/refseq/ & ftp://ftp.ncbi.nlm.nih.gov/genomes/
 
-3.reads: Schizosaccharomyces pombe
-4.refseq: Schizosaccharomyces pombe: ftp://ftp.sanger.ac.uk/pub2/yeast/pombe/ GFF or Chromosome_contigs directory.
+1. Escherichia coli:
+reads:  http://www.ncbi.nlm.nih.gov/sra?term=SRX000429
+refseq: http://www.ncbi.nlm.nih.gov/nuccore?term=Escherichia%20coli%20str.%20K-12%20substr.%20MG1655
+
+2.Schizosaccharomyces pombe
+reads: 
+refseq: ftp://ftp.sanger.ac.uk/pub2/yeast/pombe/ GFF or Chromosome_contigs directory.
+
+3.Mouse_B6_Genome_on_Illumina
+reads: http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001314
+paper"High-quality draft assemblies of mammalian genomes from massively parallel sequence data" uses data from
+
+(Library type)	(Illumina lane identifier)	(SRR run accession no.)
+Mouse Fragment		6141AAAXX.1					SRR067634
+					6141AAAXX.2					SRR067650
+					6141AAAXX.3					SRR067648
+					6141AAAXX.4					SRR067622
+					6141AAAXX.5					SRR067649
+					6141AAAXX.6					SRR067641
+					6141AAAXX.7					SRR067670
+					6141AAAXX.8					SRR067636
+					613F0AAXX.1					SRR067612
+					613F0AAXX.2					SRR067616
+					613F0AAXX.3					SRR067615
+					613F0AAXX.4					SRR067623
+					613F0AAXX.5					SRR067605
+					613F0AAXX.6					SRR067646
+					613F0AAXX.7					SRR067633
+					613F0AAXX.8					SRR067620
+					613F1AAXX.1					SRR067606
+					613F1AAXX.2					SRR067611
+					613F1AAXX.3					SRR067625
+					613F1AAXX.4					SRR067601
+					613F1AAXX.5					SRR067624
+					613F1AAXX.6					SRR067645
+					613F1AAXX.7					SRR067635
+					613F1AAXX.8					SRR067653
+Jumping 1			61NDRAAXX.1					SRR067607
+					61NDRAAXX.2					SRR067669
+					61NDRAAXX.3					SRR067603
+					61NDRAAXX.4					SRR067660
+					61NDRAAXX.5					SRR067619
+					61NDRAAXX.6					SRR067658
+					61NDRAAXX.7					SRR067604
+Jumping 2			61NGGAAXX.2					SRR067631
+					61NGGAAXX.3					SRR067639
+					61NGGAAXX.4					SRR067657
+					61NGGAAXX.5					SRR067610
+					61NGGAAXX.6					SRR067654
+Jumping 3			61NCCAAXX.1					SRR067644
+					61NCCAAXX.2					SRR067618
+					61NCCAAXX.3					SRR067652
+					61NCCAAXX.4					SRR067663
+Long jumping 1		207HCABXX.1					SRR067823
+Long jumping 2		207HCABXX.2					SRR067839
+Long jumping 3		207HCABXX.3					SRR067846
+Long jumping 4		207HCABXX.5					SRR067858
+Long jumping 5		207HCABXX.8					SRR067830
+Fosmid				61NBYAAXX.1					SRR067609
+
+We started from 47 pairs of input files read1.fastq, read2.fastq. 
+EcoP15I reads were trimmed to include only the first 26 bases and 
+the Fosmid reads were trimmed to remove the first 4 bases.
+
+Jumping library reads were trimmed to 36 bases, but counted as 
+full length for purposes of computing coverage; long jumping (EcoP15I) reads
+were trimmed to 26 bases; Fosmid (Fosill) reads were trimmed to remove 4 
+bases from the left; and Fosmid (ShARC) reads were
+trimmed to remove 28 bases from the left. Library
+
+refseq:ftp://ftp.ncbi.nlm.nih.gov/genomes/M_musculus/ 
